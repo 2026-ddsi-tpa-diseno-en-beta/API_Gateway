@@ -2,6 +2,11 @@
 
 Gateway Spring Cloud Gateway / Java 21. Es el punto de entrada para clientes externos; no cambia contratos de los módulos.
 
+🧩 Link al despliegue en Render
+- [https://api-gateway-donatrack.onrender.com](https://api-gateway-donatrack.onrender.com)
+
+- Healht: https://api-gateway-donatrack.onrender.com/actuator/health
+
 ## Prefijos públicos
 
 | Prefijo del gateway | Destino | Ejemplo |
@@ -24,6 +29,5 @@ Para los servicios gratuitos de Render, contemplar cold starts. Gateway usa 5s d
 
 - Prometheus: `/actuator/prometheus`
 - Actuator: `/actuator/health`, `/actuator/metrics`, `/actuator/gateway/routes`
-- Exportación Datadog opcional con `DATADOG_ENABLED`, `DATADOG_API_KEY`, `DATADOG_URI` y `DATADOG_STEP`.
 - Better Stack está integrado por `logback-logtail`: configurar `BETTERSTACK_SOURCE_TOKEN` y opcionalmente `BETTERSTACK_INGEST_URL`; el appender se activa solo si existe el token. La consola sigue activa como fallback. El `APP_NAME` permite identificar el servicio.
 
