@@ -15,7 +15,7 @@ Gateway Spring Cloud Gateway / Java 21. Es el punto de entrada para clientes ext
 | `/api/donadores-entidades/**` | Donadores y Entidades | `/api/donadores-entidades/necesidades` |
 | `/api/logistica/**` | Logística | `/api/logistica/stock/3` |
 | `/api/incentivos/**` | Incentivos | `/api/incentivos/misiones` |
-| `/api/consultas/**` | Servicio de Consultas | `/api/consultas/donadores/12` |
+| `/api/consultas/**` | Servicio de Consultas | `/api/consultas/donadores/12/ficha` |
 
 `StripPrefix=2` elimina `/api/{componente}` y conserva la ruta del módulo. Métodos HTTP, query params, body y headers se reenvían por Gateway. El tráfico interno entre módulos puede seguir directo como permite el instructivo.
 
