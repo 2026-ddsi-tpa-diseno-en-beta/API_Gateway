@@ -42,7 +42,7 @@ spring:
               filters:
                 - StripPrefix=2
             - id: consultas
-              uri: ${CONSULTAS_URL:http://localhost:8085}
+              uri: ${CONSULTAS_URL:https://donatrack-servicio-consultas.onrender.com}
               predicates:
                 - Path=/api/consultas/**
               filters:
@@ -67,15 +67,8 @@ management:
         enabled: true
   metrics:
     tags:
-      application: ${DD_SERVICE:donatrack-api-gateway}
-      env: ${DD_ENV:prod}
-  datadog:
-    metrics:
-      export:
-        enabled: ${DATADOG_ENABLED:false}
-        api-key: ${DATADOG_API_KEY:}
-        uri: ${DATADOG_URI:https://api.datadoghq.com}
-        step: ${DATADOG_STEP:30s}
+      application: ${APP_NAME:donatrack-api-gateway}
+      env: ${APP_ENV:prod}
 
 logging:
   level:
